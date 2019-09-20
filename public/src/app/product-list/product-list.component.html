@@ -1,0 +1,14 @@
+
+<div class="margin-top">
+  <div class="row">
+    <div class="card" style="width: 18rem;" *ngFor="let jersey of allJerseys">
+      <img [src]="jersey.image" class="card-img-top" style = "width: 280px; height: 300px;" [alt]="jersey.title">
+      <div class="card-body">
+        <h5 class="card-title">{{jersey.title}}</h5>
+        <p class="card-text">${{jersey.price}}</p>
+        <button [routerLink]="['/edit/', jersey._id]" class="btn btn-info">Edit</button>
+        <button (click)="deleteJersey(jersey._id)" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class = "spacer">
+        <h3>Edit This Jersey</h3>
+    
+    <form (submit)="updateJersey()">
+        <p style = "color: red;" *ngFor = "let error of errors">{{error}}</p>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Product Title</label>
+              <input style = "width: 70%" type="text" class="form-control" name = "title" aria-describedby="emailHelp" placeholder="Enter product" [(ngModel)]="jersey.title">
+              <small id="emailHelp" class="form-text text-muted">Please make sure your jersey is clean.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Image</label>
+              <input style = "width: 70%" type="text" class="form-control" name = "image" placeholder="Image URL" [(ngModel)]="jersey.image">
+            </div>
+            <div class="form-group">
+                    <label for="exampleInputPassword1">Price</label>
+                    <input style = "width: 70%" type="number" class="form-control" name = "price" placeholder="$$$" [(ngModel)]="jersey.price">
+                  </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    
+        </div>
